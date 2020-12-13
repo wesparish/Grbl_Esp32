@@ -56,6 +56,12 @@
 
 #define Z_SERVO_PIN             GPIO_NUM_27     // D27
 
+
+// #define CONTROL_SAFETY_DOOR_PIN GPIO_NUM_35  // labeled Door,  needs external pullup
+// #define CONTROL_RESET_PIN       GPIO_NUM_34  // labeled Reset, needs external pullup
+// #define CONTROL_FEED_HOLD_PIN   GPIO_NUM_36  // labeled Hold,  needs external pullup
+// #define CONTROL_CYCLE_START_PIN GPIO_NUM_39  // labeled Start, needs external pullup
+
 #define SPINDLE_TYPE SpindleType::NONE
 
 // defaults
