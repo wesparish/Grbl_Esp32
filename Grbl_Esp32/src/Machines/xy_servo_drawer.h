@@ -30,18 +30,6 @@
 */
 
 #define MACHINE_NAME "XY_SERVO_DRAWER"
-
-
-/// WRP TEMPORARY ///
-// This cannot use homing because there are no switches
-// #ifdef DEFAULT_HOMING_CYCLE_0
-//     #undef DEFAULT_HOMING_CYCLE_0
-// #endif
-
-// #ifdef DEFAULT_HOMING_CYCLE_1
-//     #undef DEFAULT_HOMING_CYCLE_1
-// #endif
-//////////////////////
                                                 // ESP32-devkit pin
 #define X_STEP_PIN              GPIO_NUM_12     // D12
 #define X_DIRECTION_PIN         GPIO_NUM_26     // D26
@@ -56,7 +44,6 @@
 
 #define Z_SERVO_PIN             GPIO_NUM_27     // D27
 
-
 // #define CONTROL_SAFETY_DOOR_PIN GPIO_NUM_35  // labeled Door,  needs external pullup
 // #define CONTROL_RESET_PIN       GPIO_NUM_34  // labeled Reset, needs external pullup
 // #define CONTROL_FEED_HOLD_PIN   GPIO_NUM_36  // labeled Hold,  needs external pullup
@@ -66,7 +53,7 @@
 
 // defaults
 #define DEFAULT_STEP_PULSE_MICROSECONDS 3
-#define DEFAULT_STEPPER_IDLE_LOCK_TIME 250 // stay on
+#define DEFAULT_STEPPER_IDLE_LOCK_TIME 255 // stay on
 
 #define DEFAULT_STEPPING_INVERT_MASK 0 // uint8_t
 #define DEFAULT_DIRECTION_INVERT_MASK 0 // uint8_t
@@ -93,8 +80,6 @@
 #define DEFAULT_SPINDLE_RPM_MAX 1000.0 // rpm
 #define DEFAULT_SPINDLE_RPM_MIN 0.0 // rpm
 
-#define DEFAULT_LASER_MODE 0 // false
-
 #define DEFAULT_X_STEPS_PER_MM 80.0
 #define DEFAULT_Y_STEPS_PER_MM 80.0
 #define DEFAULT_Z_STEPS_PER_MM 100.0 // This is percent in servo mode...used for calibration
@@ -110,3 +95,7 @@
 #define DEFAULT_X_MAX_TRAVEL 300.0 // mm NOTE: Must be a positive value.
 #define DEFAULT_Y_MAX_TRAVEL 300.0 // mm NOTE: Must be a positive value.
 #define DEFAULT_Z_MAX_TRAVEL 100.0 // This is percent in servo mode...used for calibration
+
+//#define DEFAULT_Z_HOMING_MPOS 5.0  // MPos will be set to 5mm after homing
+//#define Z_SERVO_CAL_MIN 1.0        // calibration factor for the minimum PWM duty
+//#define Z_SERVO_CAL_MAX 1.0        // calibration factor for the maximum PWM duty
