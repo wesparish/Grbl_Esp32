@@ -104,6 +104,9 @@
 #define Z_SERVO_CAL_MIN               1.0   // calibration factor for the minimum PWM duty
 #define Z_SERVO_CAL_MAX               1.0   // calibration factor for the maximum PWM duty
 
+#undef SDCARD_DET_PIN
+#define SDCARD_SD_PIN   -1
+
 /*
 Settings for successful first print
 >>> $$
